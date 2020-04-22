@@ -1,0 +1,27 @@
+cloud189:
+  AppKey: ""
+  AppSecret: ""
+  accessToken: ""
+  userInfoUrl: "http://api.cloud.189.cn/getUserInfo.action"
+  listFilesUrl: "http://api.cloud.189.cn/listFiles.action"
+  fileDownloadUrl: "http://api.cloud.189.cn/getFileDownloadUrl.action"
+  accessTokenUrl: "https://cloud.189.cn/open/oauth2/accessToken.action"
+  redis:
+    urlKey: "URLKEY::"
+    listFileKey: "listFileKey::"
+logging:
+  level:
+    com.yyh: debug
+server:
+  port: 80
+
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+
+druid:
+  name: "qwertyuiop"
+  password: "qwertyuiop"
+
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>文件列表</title>
+</head>
+<body>
+<table width="100%" border="1" cellspacing="0" cellpadding="0">
+    <tr>
+        <th>文件</th>
+        <th>日期</th>
+        <th>大小</th>
+        <th>操作</th>
+    </tr>
+    <tr th:each="folder:${folderList}">
+        <td th:text="${folder.name}"></td>
+        <td th:text="${folder.createDate}"></td>
+        <td th:text="--">--</td>
+        <td><a th:href="${#request.getContextPath()+'/list/'+folder.id}">进入文件夹</a></td>
+    </tr>
+    <tr th:each="file:${fileList}">
+        <td th:text="${file.name}"></td>
+        <td th:text="${file.createDate}"></td>
+        <td th:text="${file.size}+'byte'"></td>
+        <td>
+            <a th:href="${#request.getContextPath()+'/downLoad/'+file.id}">下载</a>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
