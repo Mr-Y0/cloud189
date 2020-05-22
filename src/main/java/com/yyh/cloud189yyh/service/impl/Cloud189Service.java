@@ -70,8 +70,8 @@ public class Cloud189Service implements ICloudPanService {
 //        properties.put("grantType","password");
 //        properties.put("timestamp",date.getTime()+"");
 //        properties.put("appSignature",HMACSHA1Util.HmacSHA1Encrypt(sb.toString(), appSecret));
-//        properties.put("loginName","13383875237");
-//        properties.put("password","123456789");
+//        properties.put("loginName","*********");
+//        properties.put("password","****");
 //        HttpEntity httpEntity = new HttpEntity<>(properties);
 //        String s = restTemplate.postForObject(accessTokenUrl, httpEntity, String.class);
 //        System.out.println("s = " + s);
